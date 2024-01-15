@@ -1,16 +1,30 @@
+// Replace this with your birth date and time in "YYYY-MM-DDTHH:MM:SS" format
+const birthDate = "2001-09-09T00:00:00";
+
+function millisecondsToYears(milliseconds) {
+    // Define the number of milliseconds in a year
+    var millisecondsInYear = 1000 * 60 * 60 * 24 * 365;
+
+    // Calculate the number of years
+    var years = milliseconds / millisecondsInYear;
+
+    return years;
+}
+
 function updateClock(birthDate) {
     const now = new Date();
     const birthDateTime = new Date(birthDate);
     const elapsedTime = now - birthDateTime;
+    const milliseconds = elapsedTime;
 
     const seconds = Math.floor(elapsedTime / 1000) % 60;
     const minutes = Math.floor(elapsedTime / (1000 * 60)) % 60;
     const hours = Math.floor(elapsedTime / (1000 * 60 * 60)) % 24;
     const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
 
-    const birthYear = birthDateTime.getFullYear();
-    const currentYear = now.getFullYear();
-    const age = currentYear - birthYear;
+    // const birthYear = birthDateTime.getFullYear();
+    // const currentYear = now.getFullYear();
+    const age = Math.floor(millisecondsToYears(milliseconds));
 
     const timeString = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
     // const ageString = "";
@@ -35,9 +49,6 @@ function updateClock(birthDate) {
     document.getElementById('PresentDay').textContent = PresentDayString;
 }
 
-// Replace this with your birth date and time in "YYYY-MM-DDTHH:MM:SS" format
-const birthDate = "2001-09-09T00:00:00";
-
 // Update the clock every second
 setInterval(() => {
     updateClock(birthDate);
@@ -45,3 +56,4 @@ setInterval(() => {
 
 // Initial update
 updateClock(birthDate);
+
