@@ -1,5 +1,5 @@
 // Replace this with your birth date and time in "YYYY-MM-DDTHH:MM:SS" format
-const birthDate = "2001-01-15T00:19:15";
+const birthDate = "1985-01-16T00:00:00";
 
 function millisecondsToYears(milliseconds) {
     // Define the number of milliseconds in a year
@@ -13,9 +13,11 @@ function millisecondsToYears(milliseconds) {
 
 function updateClock(birthDate) {
     const now = new Date();
-    const birthDateTime = new Date(birthDate);
+    const birthDateTime = (new Date(birthDate));//india do = -64803000
+    const birthDateTime1 = (new Date(birthDate)) - 64803000;
     const elapsedTime = now - birthDateTime;
-    const milliseconds = elapsedTime;
+    const elapsedTime1 = now - birthDateTime1;
+    const milliseconds = elapsedTime1;
 
     const seconds = Math.floor(elapsedTime / 1000) % 60;
     const minutes = Math.floor(elapsedTime / (1000 * 60)) % 60;
@@ -24,7 +26,7 @@ function updateClock(birthDate) {
 
     // const birthYear = birthDateTime.getFullYear();
     // const currentYear = now.getFullYear();
-    const age = Math.floor(millisecondsToYears(milliseconds));
+    const age = millisecondsToYears(milliseconds);
 
     const timeString = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
     // const ageString = "";
