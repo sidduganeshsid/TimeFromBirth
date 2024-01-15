@@ -3,7 +3,7 @@ const birthDate = "2001-09-09T00:05:05";
 
 function millisecondsToYears(milliseconds) {
     // Define the number of milliseconds in a year
-    var millisecondsInYear = 1000 * 60 * 60 * 24 * 365;
+    var millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
 
     // Calculate the number of years
     var years = milliseconds / millisecondsInYear;
