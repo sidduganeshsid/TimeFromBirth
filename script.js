@@ -52,7 +52,7 @@ function updateClock(birthDate) {
     document.getElementById('PresentDay').textContent = PresentDayString;
 }
 
-function updateClock(parentsDOM) {
+function updateClockP(parentsDOM) {
     const now = new Date();
     const birthDateTime = (new Date(parentsDOM));//india do = -64803000
     // const birthDateTime1 = (new Date(birthDate)) - 64803000;
@@ -95,10 +95,10 @@ function updateClock(parentsDOM) {
 // Update the clock every second
 setInterval(() => {
     updateClock(birthDate);
-    updateClock(parentsDOM);
+    updateClockP(parentsDOM);
 }, 1000);
 
 // Initial update
 updateClock(birthDate);
-updateClock(parentsDOM);
+updateClockP(parentsDOM);
 
