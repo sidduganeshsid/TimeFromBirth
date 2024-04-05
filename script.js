@@ -58,7 +58,7 @@ function updateClockP(parentsDOM) {
     // const birthDateTime1 = (new Date(birthDate)) - 64803000;
     const elapsedTime = now - birthDateTime;
     // const elapsedTime1 = now - birthDateTime1;
-    const milliseconds = elapsedTime1;
+    const milliseconds = elapsedTime;
 
     const Pseconds = Math.floor(elapsedTime / 1000) % 60;
     const Pminutes = Math.floor(elapsedTime / (1000 * 60)) % 60;
@@ -77,9 +77,9 @@ function updateClockP(parentsDOM) {
     // }
     // else
     // {
-    const ageString = `Age: ${age} years`;
+    const ageString = ` ${age} years`;
     // }
-    const PresentDayString = `Present Day : ${days+1}`;
+    const PresentDayString = `Present Day : ${Pdays+1}`;
 
     var UserName = "Parents";
     document.getElementById('Pname').textContent = UserName;
@@ -95,7 +95,12 @@ function updateClockP(parentsDOM) {
 // Update the clock every second
 setInterval(() => {
     updateClock(birthDate);
+    
+}, 1000);
+
+setInterval(() => {
     updateClockP(parentsDOM);
+    
 }, 1000);
 
 // Initial update
