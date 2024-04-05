@@ -55,3 +55,22 @@ img{
     font-size: 2rem;
     text-align: center;
 } */
+
+
+#PPresentDay {
+    color: #fff;
+    font-size: 2rem;
+    /* text-align: center; */
+}
+
+#Page {
+    color: #fff;
+    font-size: 2rem;
+    /* text-align: center; */
+}
+
+#Pname{
+    color:aqua;
+    font-size: 1.5rem;
+    /* text-align: center; */
+}
