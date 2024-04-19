@@ -28,7 +28,15 @@ Full tech stack [here](/techstack.md)
 |------|------|
 </div>
 
-## <img src='https://img.stackshare.io/languages.svg'/> Languages (2)
+## <img src='https://img.stackshare.io/languages.svg'/> Languages (3)
+<table><tr>
+  <td align='center'>
+  <img width='36' height='36' src='https://clipground.com/images/html-logo-png-3.png' alt='HTML 5'>
+  <br>
+  <sub><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">HTML 5</a></sub>
+  <br>
+  <sub></sub>
+</td>
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/6727/css.png' alt='CSS 3'>
