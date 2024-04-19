@@ -8,6 +8,7 @@ provider: github
 branch: master
 detected_tools_count: 3
 tools:
+- name: HTML 5
 - name: CSS 3
   description: The latest evolution of the Cascading Style Sheets language
   website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
